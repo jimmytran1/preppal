@@ -1,7 +1,12 @@
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 import Navbar from '../components/Navbar'
 import UrlInput from '../components/UrlInput'
 import { supabase } from "../lib/supabaseClient";
+=======
+import Navbar from "../components/Navbar";
+import UrlInput from "../components/UrlInput";
+>>>>>>> Stashed changes
 =======
 import Navbar from "../components/Navbar";
 import UrlInput from "../components/UrlInput";
