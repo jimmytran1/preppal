@@ -1,68 +1,35 @@
-:root {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
+@import url('https://fonts.googleapis.com/css2?family=Aboreto&family=Golos+Text&display=swap');
+@import 'tailwindcss';
 
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+@theme {
+  --font-heading: 'Aboreto', serif;
+  --font-body: 'Golos Text', sans-serif;
 
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
+  --text-heading-xl: 96px;
+  --text-heading-xl--letter-spacing: -0.05em;
 
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
-}
+  --text-heading-lg: 64px;
+  --text-heading-lg--letter-spacing: -0.05em;
 
-body {
-  margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
+  --text-heading-md: 48px;
+  --text-heading-md--letter-spacing: -0.05em;
+
+  --text-heading-sm: 36px;
+  --text-heading-sm--letter-spacing: -0.05em;
+
+  --text-body: 24px;
+
+  --color-gold: #C0B87A;
+  --color-cream: #F2E3BB;
+  --color-cream-light: #F9F5EC;
+  --color-green: #427A43;
+  --color-green-dark: #005F02;
 }
 
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
-}
-
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
-}
-
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
+@layer components {
+  .heading-xl { @apply font-heading text-heading-xl font-normal; }
+  .heading-lg { @apply font-heading text-heading-lg font-normal; }
+  .heading-md { @apply font-heading text-heading-md font-normal; }
+  .heading-sm { @apply font-heading text-heading-sm font-normal; }
+  .body-text  { @apply font-body text-body font-normal; }
 }
