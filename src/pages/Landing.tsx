@@ -1,5 +1,6 @@
 import Navbar from '../components/Navbar'
 import UrlInput from '../components/UrlInput'
+import { supabase } from "../lib/supabaseClient";
 
 export default function Landing() {
   return (
