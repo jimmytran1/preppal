@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 
-export default function UrlInput() {
+export default function UrlInput({ className = '' }: { className?: string }) {
   const [url, setUrl] = useState('')
   const navigate = useNavigate()
 
@@ -14,7 +14,7 @@ export default function UrlInput() {
   return (
     <form
       onSubmit={handleSubmit}
-      className="flex items-center w-full max-w-2xl bg-white rounded-full pr-2 py-2 pl-4 gap-3"
+      className={`flex items-center w-full bg-white rounded-full pr-2 py-2 pl-4 gap-3 ${className}`}
     >
       {/* Search icon */}
       <svg className="w-6 h-6 text-green shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
